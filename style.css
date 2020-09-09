@@ -1,0 +1,320 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #fafafa;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  position: relative;
+  /*max-width: 100vw;
+  overflow-x: hidden;*/
+}
+/*
+#body{
+  margin:0;
+  width:100%;
+  height:100%;
+}*/
+
+body::before {
+  width: 380px;
+  height: 480px;
+  border-radius: 0 0 190px 190px;
+  background: linear-gradient(225deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  -webkit-transform: translateX(min(270px, calc(-66% + 11vw)));
+          transform: translateX(min(270px, calc(-66% + 11vw)));
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+body::after {
+  width: 380px;
+  height: 480px;
+  border-radius: 0 0 190px 190px;
+  -webkit-transform: rotate(180deg) translateX(calc(-66% + 11vw));
+          transform: rotate(180deg) translateX(calc(-66% + 11vw));
+  margin-left: auto;
+  background: hsl(270, 20%, 96%);
+  bottom: 0;
+  right: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+/*
+#container{
+  display:flex;
+  justify-content: space-evenly;
+}*/
+
+#phone {
+  position: relative;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 560px;
+  -webkit-transform: translate(-50%, 3%);
+          transform: translate(-50%, 3%);
+  border-radius: 33px;
+  padding: 18px;
+  box-shadow: 7px 7px 42px #777;
+}
+
+#appHeader {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 296px;
+  height: 72px;
+  background: -webkit-gradient(linear, right top, left top, from(hsl(293, 100%, 63%)), to(hsl(264, 100%, 61%)));
+  background: linear-gradient(270deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  border-radius: 26px 26px 8px 8px;
+  z-index: 2;
+}
+
+#appHeader #arrow {
+  width: 30px;
+  margin-top: 30px;
+  margin-left: 7px;
+}
+
+#appHeader #avatar {
+  width: 33px;
+  border: #fff solid 2px;
+  border-radius: 20px;
+}
+
+#appHeader #headingWrap {
+  -webkit-transform: translateX(85px) translateY(-42px);
+          transform: translateX(85px) translateY(-42px);
+}
+
+#appHeader #userName {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+#appHeader #status {
+  font-size: 11px;
+  color: hsl(276, 100%, 81%);
+}
+
+#appHeader #kebab {
+  width: 6px;
+  -webkit-transform: translateX(272px) translateY(-72px);
+          transform: translateX(272px) translateY(-72px);
+}
+
+#kebab div {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 3px;
+}
+
+#appBody {
+  background: hsl(270, 20%, 96%);
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  padding: 8px;
+  -webkit-transform: translateX(-8px) translateY(-9px);
+          transform: translateX(-8px) translateY(-9px);
+}
+
+#appHeader:before {
+  position: absolute;
+  background: #fff;
+  content: "";
+  width: 150px;
+  height: 23px;
+  z-index: 77;
+  margin-left: 73px;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  border-radius: 0 0 15px 15px;
+}
+
+.textBubble {
+  position: absolute;
+  padding: 8px;
+  /* border-radius: 14px 14px 14px 9px;*/
+  max-width: 150px;
+  font-size: 11px;
+}
+
+.textBubble.left {
+  background: #ebe5f7;
+  color: hsl(276, 55%, 52%);
+  border-radius: 14px 14px 14px 7px;
+}
+
+.textBubble.right {
+  background: #fff;
+  border-radius: 14px 14px 7px 14px;
+  box-shadow: 0px 5px 12px #ccc;
+}
+
+#tb1 {
+  -webkit-transform: translateY(76px);
+          transform: translateY(76px);
+}
+
+#tb2 {
+  -webkit-transform: translateY(130px);
+          transform: translateY(130px);
+}
+
+#photosWrap {
+  -webkit-transform: translateX(112px) translateY(184px);
+          transform: translateX(112px) translateY(184px);
+}
+
+#photosWrap img {
+  border-radius: 12px;
+  width: 50px;
+  margin-left: 3px;
+}
+
+#tb3 {
+  -webkit-transform: translateX(112px) translateY(191px);
+          transform: translateX(112px) translateY(191px);
+}
+
+#tb4 {
+  -webkit-transform: translateX(174px) translateY(246px);
+          transform: translateX(174px) translateY(246px);
+}
+
+#tb5 {
+  -webkit-transform: translateY(282px);
+          transform: translateY(282px);
+}
+
+#tb6,
+#tb7 {
+  -webkit-transform: translateY(346px);
+          transform: translateY(346px);
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(hsl(293, 100%, 63%)), to(hsl(264, 100%, 61%)));
+  background: linear-gradient(90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+  width: 210px;
+  line-height: 17px;
+  position: relative;
+  padding: 12px;
+}
+
+#tb6 .ring,
+#tb7 .ring {
+  display: inline-block;
+  box-sizing: border-box;
+  border: hsl(289, 100%, 72%) solid 1px;
+  border-radius: 10px;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+#tb6 span,
+#tb7 span {
+  position: absolute;
+  right: 8px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#tb7 {
+  -webkit-transform: translateY(356px);
+          transform: translateY(356px);
+}
+/* not an actual input*/
+#textInput {
+  position: relative;
+  margin: auto;
+  background: #fff;
+  width: 90%;
+  height: 32px;
+  line-height: 32px;
+  font-size: 11px;
+  -webkit-transform: translateY(370px);
+          transform: translateY(370px);
+  padding: 7px 7px 7px 18px;
+  border-radius: 20px;
+  color: hsl(206, 6%, 79%);
+}
+
+#textInput a {
+  position: absolute;
+  right: 7px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: hsl(271, 36%, 24%);
+  width: 32px;
+  height: 32px;
+  border-radius: 17px;
+}
+
+#textInput a img {
+  width: 20px;
+  -webkit-transform: translateX(7px) translateY(3px) rotate(180deg);
+          transform: translateX(7px) translateY(3px) rotate(180deg);
+}
+
+#textWrap {
+  margin: 50px auto;
+  text-align: center;
+  width: 320px;
+}
+
+#h1 {
+  font-weight: 500;
+  font-size: 34px;
+  color: hsl(271, 36%, 24%);
+}
+
+#textWrap p {
+  font-size: 16px;
+  color: hsl(270, 7%, 64%);
+}
+
+@media (min-width: 800px) {
+  #container {
+    margin: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+            align-items: center;
+    width: min(1000px, 80%);
+    height: 100%;
+  }
+  #phone {
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 3%);
+            transform: translate(0, 3%);
+    width: 280px;
+    height: 560px;
+  }
+  #textWrap {
+    text-align: left;
+    width: 450px;
+    margin-right: 0;
+  }
+  #h1 {
+    font-size: 42.5px;
+  }
+  #textWrap p {
+    font-size: 20px;
+  }
+}
